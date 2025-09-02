@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shooting Game</title>
+  <link rel="stylesheet" href="coba.css">
+</head>
+<body>
+
+  <div id="home">
+    <div class="logo">
+      <img src="shooter.jpg" alt="Logo">
+      <h1>Shooting Game</h1>
+    </div>
+
+    <input type="text" id="username" placeholder="Enter your name">
+    <select id="level">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <div class="gun-choice">
+      <label class="choice">
+        <img src="gun1.jpg" alt="Gun 1">
+        <input type="radio" name="gun" value="gun1.jpg">
+      </label>
+      <label class="choice">
+        <img src="gun2.jpg" alt="Gun 2">
+        <input type="radio" name="gun" value="gun2.jpg">
+      </label>
+    </div>
+
+    <div class="target-choice">
+      <label class="choice">
+        <img src="target1.jpg" alt="Target 1">
+        <input type="radio" name="target" value="target1.jpg">
+      </label>
+      <label class="choice">
+        <img src="target2.jpg" alt="Target 2">
+        <input type="radio" name="target" value="target2.jpg">
+      </label>
+      <label class="choice">
+        <img src="target3.jpg" alt="Target 3">
+        <input type="radio" name="target" value="target3.jpg">
+      </label>
+    </div>
+
+    <div class="buttons">
+      <button id="playBtn">Play Game</button>
+      <button id="instructionBtn">Instructions</button>
+    </div>
+  </div>
+
+  <div id="game" class="hidden">
+    <div class="hud">
+      <div>Player: <span id="playerName"></span></div>
+      <div>Score: <span id="score">0</span></div>
+      <div>Level: <span id="playerLevel"></span></div>
+    </div>
+
+    <div id="gameArea"></div>
+
+    <img id="selectedGun" class="gun" src="" alt="Gun">
+    
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <select id="sortLeaderboard">
+        <option value="score">Sort By Score</option>
+        <option value="name">Sort By Name</option>
+      </select>
+      <ul id="leaderboardList"></ul>
+    </div>
+  </div>
+
+  <div id="instructionModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Instructions</h2>
+      
+    </div>
+  </div>
+
+  <script src="coba.js"></script>
+</body>
+</html>

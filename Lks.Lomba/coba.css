@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  text-align: center;
+}
+
+#home {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#home .logo img {
+  width: 120px;
+}
+#home .logo h1 {
+  margin: 5px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#username, #level {
+  width: 300px;
+  padding: 12px;
+  margin: 10px auto;
+  display: block;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.gun-choice, .target-choice {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.choice img {
+  display: block;
+  width: 100px;
+  cursor: pointer;
+}
+.choice input[type="radio"] {
+  display: inline-block;
+  margin-top: 8px;
+  transform: scale(1.4);
+  accent-color: green;
+}
+
+.buttons {
+  margin: 20px;
+}
+#playBtn {
+  background: green;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#instructionBtn {
+  background: brown;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+#game {
+  background: url("background.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#gameArea {
+  height: 80%;
+  position: relative;
+}
+
+.target {
+  position: absolute;
+  width: 100px;
+  cursor: crosshair;
+}
+
+.boom {
+  position: absolute;
+  width: 120px;
+  pointer-events: none;
+  animation: fadeOut 0.5s forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.5); }
+}
+
+.gun {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  z-index: 5;
+}
+.leaderboard {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #111;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  padding: 15px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.leaderboard h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.leaderboard select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard li {
+  background: #222;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leaderboard .player-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard .player-name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
+
+.leaderboard .player-score {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.leaderboard button {
+  background: yellow;
+  color: black;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content {
+  background: #222;
+  color: #fff;
+  width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #555;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+  color: #ff4d4d;
+  font-weight: bold;
+}
